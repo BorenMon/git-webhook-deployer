@@ -1,0 +1,14 @@
+services:
+  app:
+    container_name: git-webhook-deployer
+    env_file:
+      - .env
+    build:
+      context: .
+      args:
+        APP_ENV: ${APP_ENV}
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - '${PORT}:${PORT}'

@@ -1,9 +1,13 @@
 import { createServer } from "http";
 import { createHmac, timingSafeEqual } from 'crypto';
+import dotenv from "dotenv";
 
+// Load environment variables
+dotenv.config();
+
+const PORT = process.env.PORT;
 // Webhook secret token
-const SECRET = 'QANt25nIFV[=pi9';
-const PORT = 9999;
+const SECRET = process.env.SECRET;
 
 // Function to verify the HMAC signature
 function verifySignature(payload, signature) {

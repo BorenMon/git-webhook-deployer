@@ -4,9 +4,13 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node server.js"
+    "start": "node",
+    "dev": "nodemon"
   },
   "dependencies": {
-    "crypto": "^1.0.1"
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
   }
 }
