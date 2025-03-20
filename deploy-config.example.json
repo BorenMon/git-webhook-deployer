@@ -1,0 +1,13 @@
+{
+  "project1": {
+    "main": "/path/to/deploy-project1-main.sh",
+    "staging": "/path/to/deploy-project1-staging.sh"
+  },
+  "project2": {
+    "develop": "/path/to/deploy-project2-develop.sh"
+  },
+  "project3": {
+    "release": "/path/to/deploy-project3-release.sh",
+    "hotfix": "/path/to/deploy-project3-hotfix.sh"
+  }
+}

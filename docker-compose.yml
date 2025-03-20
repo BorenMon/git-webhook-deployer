@@ -5,8 +5,7 @@ services:
       - .env
     build:
       context: .
-      args:
-        APP_ENV: ${APP_ENV}
+      target: ${APP_ENV}
     volumes:
       - .:/app
       - /app/node_modules
