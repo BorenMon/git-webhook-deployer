@@ -3,6 +3,7 @@ import { createHmac, timingSafeEqual } from 'crypto';
 import dotenv from "dotenv";
 import fs from "fs";
 import { exec } from "child_process";
+import ngrok from '@ngrok/ngrok';
 
 // Load environment variables
 dotenv.config();
@@ -93,7 +94,7 @@ const server = createServer((req, res) => {
     });
   } else {
     res.writeHead(405, { "Content-Type": "text/plain" });
-    res.end("Method Not Allowed\n");
+    res.end("Method Not Alowed\n");
   }
 });
 
