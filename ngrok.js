@@ -7,12 +7,6 @@ const PORT = process.env.PORT;
 
 console.log('Starting ngrok tunnel...');
 
-// Keep the process alive
-process.on('SIGINT', () => {
-	console.log('Shutting down ngrok tunnel...');
-	process.exit();
-});
-
 // Create tunnel and keep it running
 ngrok.connect({ 
 	addr: PORT,
@@ -29,5 +23,4 @@ ngrok.connect({
 })
 .catch(error => {
 	console.error('Error establishing ngrok tunnel:', error);
-	process.exit(1);
 });
