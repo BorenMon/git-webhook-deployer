@@ -5,7 +5,7 @@ WORKDIR /app
 
 # Copy package files and install dependencies
 COPY package*.json ./
-RUN npm install --only=production
+RUN npm install --omit=dev
 
 # 2. Development Stage
 FROM node:20-alpine AS development
