@@ -3,7 +3,6 @@ import { createHmac, timingSafeEqual } from 'crypto';
 import dotenv from "dotenv";
 import fs from "fs";
 import { exec } from "child_process";
-import ngrok from '@ngrok/ngrok';
 
 // Load environment variables
 dotenv.config();
